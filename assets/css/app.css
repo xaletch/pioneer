@@ -1,0 +1,27 @@
+/* СБРОС СТИЛЕЙ CSS */
+@import 'resetStyles.css';
+
+/* ЦВЕТА CSS */
+@import 'root.css';
+
+/* ШРИФТЫ CSS */
+@import './fonts.css';
+
+/* КЛАССЫ */
+@import './classes.css';
+
+/* СТИЛИ CSS */
+@import './components/header.css';
+
+@import './components/hero.css';
+@import './components/aboutCompany.css';
+@import './components/basicService.css';
+@import './components/servicesIndustry.css';
+@import './components/workUs.css';
+@import './components/reviews.css';
+@import './components/submitApplication.css';
+@import './components/questions.css';
+@import './components/blog.css';
+@import './components/contacts.css';
+
+@import './components/footer.css';
