@@ -92,13 +92,7 @@ window.addEventListener('scroll', () => {
     const headerBottom = document.querySelector('.header_bottom');
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition > 0) {
-        headerTop.classList.add('sticky');
-        headerBottom.style.display = 'none';
-    } else {
-        headerTop.classList.remove('sticky');
-        headerBottom.style.display = 'block';
-    }
+    scrollPosition > 0 ? headerTop.classList.add('sticky') : headerTop.classList.remove('sticky');
 });
 
 // МОБИЛЬНОE МЕНЮ
