@@ -33,6 +33,9 @@
 .about-company_title .button svg {
     fill: #054DB4;
 }
+.about-company .buttonB svg {
+    fill: #054DB4;
+}
 .about-company_title .button:hover {
     background: var(--Blue-main);
     color: var(--White);
