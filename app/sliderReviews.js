@@ -1,6 +1,6 @@
-let sliderReview = document.querySelector('.reviews .wrapper');
-let itemsReview = document.querySelectorAll('.reviews-card');
-let dotsReview = document.querySelectorAll('.reviews_dots-item');
+const sliderReview = document.querySelector('.reviews .wrapper');
+const itemsReview = document.querySelectorAll('.reviews-card');
+const dotsReview = document.querySelectorAll('.reviews_dots-item');
 
 let cardWidthReview = 422;
 let spacingReview = 30;
@@ -20,16 +20,14 @@ if (screen.width <= 480) {
     cardWidthReview = 340;
 }
 
-sliderReview.addEventListener('touchmove', drag, { passive: true });
-sliderReview.addEventListener('mouseleave', dragEnd);
+sliderReview.addEventListener('mousedown', dragStart);
+window.addEventListener('mousemove', drag);
+window.addEventListener('mouseup', dragEnd);
+window.addEventListener('mousemove', throttle(drag, 1));
 
-if (screen.width <= 1024) {
-    sliderReview.addEventListener('mousedown', dragStart);
-    sliderReview.addEventListener('touchstart', dragStart);
-    sliderReview.addEventListener('mouseleave', dragEnd);
-    sliderReview.addEventListener('touchend', dragEnd);
-    sliderReview.addEventListener('touchmove', drag, { passive: true });
-}
+sliderReview.addEventListener('touchstart', dragStart);
+window.addEventListener('touchmove', drag);
+window.addEventListener('touchend', dragEnd);
 
 function dragStart(event) {
     if (event.type === 'touchstart') {
@@ -39,55 +37,67 @@ function dragStart(event) {
         sliderReview.style.cursor = 'grabbing';
     }
     isDraggingReview = true;
-}
+};
 
 function drag(event) {
     if (isDraggingReview) {
-        let currentPosition = 0;
-        if (event.type === 'touchmove') {
-            currentPosition = event.touches[0].clientX - startPosReview;
-        } else {
-            currentPosition = event.clientX - startPosReview;
-        }
-        currentTranslateReview = prevTranslateReview + currentPosition;
-        sliderReview.style.transform = `translateX(${currentTranslateReview}px)`;
+        requestAnimationFrame(() => {
+            let currentPosition = event.type === 'touchmove'
+                ? event.touches[0].clientX - startPosReview
+                : event.clientX - startPosReview;
+            currentTranslateReview = prevTranslateReview + currentPosition;
+            sliderReview.style.transform = `translateX(${currentTranslateReview}px)`;
+        });
     }
-}
+};
+
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  }
 
 function reloadSliderReview() {
-    let position = -(cardWidthReview + spacingReview) * activeReview;
-    sliderReview.style.left = position + 'px';
-    sliderReview.style.transform = 'none'
+    const position = -(cardWidthReview + spacingReview) * activeReview;
+    sliderReview.style.transform = `translateX(${position}px)`;
 
-    let lastActiveDot = document.querySelector('.reviews_dots-active');
-    lastActiveDot.classList.remove('reviews_dots-active');
-    dotsReview[activeReview].classList.add('reviews_dots-active');
-}
+    sliderReview.addEventListener('transitionend', updateDotAfterTransition);
+
+    function updateDotAfterTransition() {
+        sliderReview.removeEventListener('transitionend', updateDotAfterTransition);
+        
+        const lastActiveDot = document.querySelector('.reviews_dots-active');
+        if (lastActiveDot) {
+            lastActiveDot.classList.remove('reviews_dots-active');
+        }
+        dotsReview[activeReview].classList.add('reviews_dots-active');
+    }
+};
 
 function dragEnd() {
     isDraggingReview = false;
-    let movedBy = currentTranslateReview - prevTranslateReview;
+    
+    const movedBy = currentTranslateReview - prevTranslateReview;
+    
     if (movedBy < -100 && activeReview < lengthItemsReview) {
         activeReview++;
     } else if (movedBy > 100 && activeReview > 0) {
         activeReview--;
     }
-
-    if (screen.width >= 1400 && currentTranslateReview < -905) {
-        activeReview = 0;
-    }
-
-    if (cardWidthReview === 350 && currentTranslateReview < -1520) {
-        activeReview = 0;
-    }
-
-    currentTranslateReview = -(cardWidthReview + spacingReview) * activeReview;
-    prevTranslateReview = currentTranslateReview;
+    
+    prevTranslateReview = currentTranslateReview = -(cardWidthReview + spacingReview) * activeReview;
 
     sliderReview.style.cursor = 'grab';
-
+    
     reloadSliderReview();
-}
+};
 
 dotsReview.forEach((li, key) => {
     li.addEventListener('click', () => {
@@ -96,4 +106,19 @@ dotsReview.forEach((li, key) => {
     });
 });
 
-window.addEventListener('resize', reloadSliderReview);
+function debounce(func, wait = 10, immediate = true) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+window.addEventListener('resize', debounce(reloadSliderReview));
