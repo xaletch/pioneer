@@ -20,12 +20,15 @@ if (screen.width <= 480) {
     cardWidthReview = 340;
 }
 
+sliderReview.addEventListener('touchmove', drag, { passive: true });
+sliderReview.addEventListener('mouseleave', dragEnd);
+
 if (screen.width <= 1024) {
     sliderReview.addEventListener('mousedown', dragStart);
     sliderReview.addEventListener('touchstart', dragStart);
-    sliderReview.addEventListener('mouseup', dragEnd);
+    sliderReview.addEventListener('mouseleave', dragEnd);
     sliderReview.addEventListener('touchend', dragEnd);
-    sliderReview.addEventListener('touchmove', drag);
+    sliderReview.addEventListener('touchmove', drag, { passive: true });
 }
 
 function dragStart(event) {
