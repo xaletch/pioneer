@@ -87,12 +87,25 @@ closeSearchMenu.addEventListener('click', () => {
 });
 
 // ЗАКРЕП ХЕДЕРА ПРИ СКРОЛЛЕ 
+let lastScrollPosition = 0;
+
 window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
     const headerTop = document.querySelector('.header_top');
     const headerBottom = document.querySelector('.header_bottom');
     const scrollPosition = window.scrollY;
+  
+    if (scrollPosition > lastScrollPosition) {
+        headerTop.classList.add('hidden');
+        headerBottom.classList.add('hidden');
+    } else {
+        headerTop.classList.remove('hidden');
+        headerBottom.classList.remove('hidden');
+    }
 
-    scrollPosition > 0 ? headerTop.classList.add('sticky') : headerTop.classList.remove('sticky');
+    lastScrollPosition = scrollPosition;
+
+    scrollPosition > 0 ? header.classList.add('sticky') : header.classList.remove('sticky');
 });
 
 // МОБИЛЬНОE МЕНЮ
@@ -124,13 +137,15 @@ let currentTranslate = 0;
 let prevTranslate = 0;
 let animationID = 0;
 
-slider.addEventListener('mousedown', dragStart);
-slider.addEventListener('touchstart', dragStart);
-slider.addEventListener('mouseup', dragEnd);
-slider.addEventListener('touchend', dragEnd);
-slider.addEventListener('mouseleave', dragEnd);
-slider.addEventListener('mousemove', drag);
-slider.addEventListener('touchmove', drag);
+if (screen.width <= 760) {
+    slider.addEventListener('mousedown', dragStart);
+    slider.addEventListener('touchstart', dragStart);
+    slider.addEventListener('mouseup', dragEnd);
+    slider.addEventListener('touchend', dragEnd);
+    slider.addEventListener('mouseleave', dragEnd);
+    slider.addEventListener('mousemove', drag);
+    slider.addEventListener('touchmove', drag);
+}
 
 function dragStart(event) {
     if (event.type === 'touchstart') {
