@@ -144,20 +144,19 @@ function dragStart(event) {
 }
 
 function drag(event) {
-    if (isDragging) {
-        let currentPosition = 0;
-        if (event.type === 'touchmove') {
-            currentPosition = event.touches[0].clientX - startPos;
-        } else {
-            currentPosition = event.clientX - startPos;
-        }
-        currentTranslate = prevTranslate + currentPosition;
+    if (!isDragging) return;
+
+    let currentPosition = event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
+    let currentPosition2 = currentPosition - startPos;
+    currentTranslate = prevTranslate + currentPosition2;
+
+    if (!animationID) {
+        animationID = requestAnimationFrame(animation);
     }
 }
 
 function reloadSlider() {
     let position = -(cardWidth + spacing) * active;
-
     slider.style.transform = `translateX(${position}px)`;
 
     let lastActiveDot = document.querySelector('.dots-item_active');
@@ -168,16 +167,26 @@ function reloadSlider() {
 }
 
 
-function drag(event) {
-    if (!isDragging) return;
-
-    let currentPosition = event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
-    let currentPosition2 = currentPosition - startPos;
-    currentTranslate = prevTranslate + currentPosition2;
-
-    if (!animationID) {
-        animationID = requestAnimationFrame(animation);
+function dragEnd() {
+    cancelAnimationFrame(animationID);
+    isDragging = false;
+    let movedBy = currentTranslate - prevTranslate;
+    if (movedBy < -100 && active < lengthItems) {
+        active++;
+    } else if (movedBy > 100 && active > 0) {
+        active--;
     }
+
+    if (currentTranslate < -2290) {
+        active = 0;
+    }
+
+    currentTranslate = -(cardWidth + spacing) * active;
+    prevTranslate = currentTranslate;
+
+    slider.style.cursor = 'grab';
+
+    reloadSlider();
 }
 
 function animation() {
