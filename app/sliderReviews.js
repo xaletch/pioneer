@@ -19,6 +19,7 @@ if (screen.width <= 760) {
 if (screen.width <= 480) {
     cardWidthReview = 340;
 }
+console.log(cardWidthReview)
 
 sliderReview.addEventListener('mousedown', dragStart);
 window.addEventListener('mousemove', drag);
@@ -45,8 +46,20 @@ function drag(event) {
             let currentPosition = event.type === 'touchmove'
                 ? event.touches[0].clientX - startPosReview
                 : event.clientX - startPosReview;
-            currentTranslateReview = prevTranslateReview + currentPosition;
-            sliderReview.style.transform = `translateX(${currentTranslateReview}px)`;
+            
+            let translateX = prevTranslateReview + currentPosition;
+
+            if(activeReview === 0 && currentPosition > 0){
+              translateX = 0;
+            }
+
+            if(activeReview === lengthItemsReview && currentPosition < 0){
+              translateX = -((cardWidthReview + spacingReview) * lengthItemsReview);
+            }
+
+            currentTranslateReview = translateX;
+
+            sliderReview.style.transform = `translateX(${translateX}px)`;
         });
     }
 };
@@ -88,8 +101,13 @@ function dragEnd() {
     
     if (movedBy < -100 && activeReview < lengthItemsReview) {
         activeReview++;
-    } else if (movedBy > 100 && activeReview > 0) {
+    }
+    else if (movedBy > 100 && activeReview > 0) {
         activeReview--;
+    }
+    
+    if (activeReview === lengthItemsReview && movedBy < -100) {
+        activeReview = 0;
     }
     
     prevTranslateReview = currentTranslateReview = -(cardWidthReview + spacingReview) * activeReview;
