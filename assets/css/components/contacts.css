@@ -1,0 +1,120 @@
+.our-contacts .wrapper {
+    max-width: 1168px;
+    margin: 0 auto;
+    margin-top: 44px;
+    display: flex;
+    gap: 22px;
+}
+.our-contacts .inner {
+    border-radius: 34px;
+    background: var(--Lightest-grey);
+}
+.our-contacts .wrapper .card {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.our-contacts .wrapper  .card-office {
+    width: 330px;
+}
+.our-contacts .wrapper  .card-office .head {
+    height: 103px;
+    justify-content: space-between;
+}
+.our-contacts .wrapper .card .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.our-contacts .wrapper .card .head h4 {
+    margin-top: 16px;
+    color: var(--Black);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+.our-contacts .wrapper .card p {
+    margin-top: 8px;
+    color: var(--Dark-Grey);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.our-contacts .wrapper .card .info {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--Black);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1260px) {
+    .our-contacts .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .our-contacts .wrapper .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .our-contacts .inner {
+        padding: 34px 16px;
+    }
+    .our-contacts .wrapper {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    .our-contacts .wrapper .card {
+        max-width: 307px;
+        align-items: start;
+    }
+    .our-contacts .wrapper .card .head {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    .our-contacts .wrapper .card .head svg {
+        width: 24px;
+        height: 24px;
+    }
+    .our-contacts .wrapper .card .head h3 {
+        margin-top: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+    .our-contacts .wrapper .card p {
+        margin-top: 6px;
+        text-align: start;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    .our-contacts .wrapper .card-office .head {
+        height: auto;
+    }
+    .our-contacts .wrapper .card .info {
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: left;
+    }
+}
