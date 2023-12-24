@@ -1,0 +1,69 @@
+/* СБРОС СТИЛЕЙ CSS */
+@import 'resetStyles.css';
+
+/* ЦВЕТА CSS */
+@import 'root.css';
+
+/* ШРИФТЫ CSS */
+@import './fonts.css';
+
+/* КЛАССЫ */
+@import './classes.css';
+
+/* СТИЛИ CSS */
+@import './components/header.css';
+
+/* ГЛАВНАЯ */
+@import './components/hero.css';
+@import './components/aboutCompany.css';
+@import './components/basicService.css';
+@import './components/servicesIndustry.css';
+@import './components/workUs.css';
+@import './components/reviews.css';
+@import './components/submitApplication.css';
+@import './components/questions.css';
+@import './components/blog.css';
+@import './components/contacts.css';
+
+@import './components/footer.css';
+
+/* ОБЩИЕ СТИЛИ ДЛЯ КОНСУЛЬТАЦИ И ДЛЯ СТРАНИЦЫ СО СТАТЬЕЁ */
+@import './components/consultations.css';
+
+/*  */
+@import './components/documents.css';
+
+/*  */
+@import './components/typesCertificates.css';
+
+/*  */
+@import './components/all-cervices.css';
+
+/*  */
+@import './components/serviceCertification.css';
+
+/* СТРАНИЦА БЛОГА */
+@import './components/blog/blogHero.css';
+/* ВСЕ СТАТЬИ */
+@import './components/blog/allArticles.css';
+/* Рассылка */
+@import './components/blog/newsletter.css';
+
+/* СТАТЬЯ */
+@import './components/article.css';
+
+/*  */
+@import './components/heroAbout.css';
+
+/* КОМАНДА */
+@import './components/team.css';
+
+/* РЕКВИЗИТЫ */
+@import './components/requisites.css';
+
+/* ВАКАНСИИ */
+@import './components/vacancies.css';
+@import './components/sendResume.css';
+
+/* МЕЕНЮ ПОИСКА */
+@import './components/searchMenu.css';

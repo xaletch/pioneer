@@ -1,0 +1,103 @@
+.send-resume .wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 34px;
+    background: var(--Blue-main);
+}
+.send-resume .wrapper .block-form {
+    padding: 80px 30px 80px 60px;
+}
+.send-resume .wrapper .block-form .block-title {
+    position: relative;
+}
+.send-resume .block-form .block-title h3 {
+    color: var(--White);
+}
+.send-resume .block-form .block-title svg {
+    position: absolute;
+    right: 12px;
+}
+.send-resume .send-resume_img {
+    border-radius: 0 34px 34px 0;
+}
+.send-resume .input-block {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.send-resume .block-form .email-tel {
+    display: flex;
+    gap: 16px;
+}
+.send-resume .input-block label {
+    margin-bottom: 4px;
+    color: var(--White);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.send-resume .input-block .input-wrapper {
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1px solid var(--white-opacity-10);
+}
+.send-resume .input-block textarea {
+    border-radius: 8px;
+    border: 1px solid var(--white-opacity-10);
+    padding: 12px;
+    width: 100%;
+    background: transparent;
+    color: var(--opacity-30-white);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    box-sizing: border-box;
+}
+.send-resume .input-block .input-wrapper input, .send-resume .input-block .option-select {
+    padding: 11px 0;
+    width: 100%;
+    background: transparent;
+    color: var(--opacity-30-white);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+.send-resume .input-block .input-group {
+    width: 100%;
+}
+.send-resume .input-block .input-group .input-wrapper input {
+
+}
+.send-resume .input-block .input-group span, .send-resume .input-block .input-wrapper span {
+    display: flex;
+}
+.send-resume .input-block .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.send-resume .input-block .checkbox-group label {
+    margin: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.send-resume form .input-block .send-resume_btn {
+    padding: 12px 14px;
+    width: 100%;
+    border-radius: 44px;
+    background: var(--Lightest-grey);
+    color: var(--Black);
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
