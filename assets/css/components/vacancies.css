@@ -1,0 +1,171 @@
+.vacancies .text-description {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 24px;
+    color: var(--Dark-Grey);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.vacancies .wrapper {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.vacancies .wrapper .block {
+    height: 88px;
+    padding: 20px 24px 16px 24px;
+    border-radius: 8px;
+    background: var(--Lightest-grey);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.vacancies .wrapper .block.active {
+    height: auto;
+    padding: 20px 24px 22px 24px;
+}
+.vacancies .wrapper .block.active .head-block svg {
+    transform: rotate(180deg);
+    fill: var(--Blue-main);
+}
+.vacancies .wrapper .block .head-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.vacancies .wrapper .block .head-block svg {
+    fill: var(--Light-grey);
+}
+.vacancies .wrapper .block .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.vacancies .wrapper .block .info .name {
+    color: var(--Black);
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+.vacancies .wrapper .block .head-block .info .info-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.vacancies .wrapper .block .head-block .info .info-list .item {
+    display: flex;
+    align-items: center;
+    color: var(--Dark-Grey);
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    gap: 4px;
+}
+.vacancies .wrapper .block .head-block .info .info-list .item span {
+    display: flex;
+}
+.vacancies .wrapper .block .content {
+    margin-top: 16px;
+    border-top: 1px solid var(--Light-outline);
+    position: relative;
+    z-index: 2;
+}
+.vacancies .wrapper .block .content .description-block {
+    margin-top: 16px;
+}
+.vacancies .wrapper .block .content .description-block h5 {
+    color: var(--Black);
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+}
+.vacancies .wrapper .block .content .description-block .item {
+    margin-top: 4px;
+    padding-left: 16px;
+    color: var(--Dark-Grey);
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.vacancies .wrapper .block .content .description-block .item::before {
+    content: '• ';
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+.vacancies .wrapper .block .content .btn_send-resume {
+    padding: 6px 24px;
+    margin-top: 16px;
+    border-radius: 44px;
+    border: 1.5px solid var(--Blue-main);
+    color: var(--Blue-main);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    transition: all .3s ease-in-out;
+}
+.vacancies .wrapper .block .content .btn_send-resume:hover {
+    background: var(--Blue-main);
+    color: var(--White);
+}
+
+.vacancies .wrapper .block .content.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 760px) {
+    .vacancies .text-description {
+        max-width: 500px;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .vacancies .wrapper {
+        margin-top: 32px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .vacancies .wrapper .block.active .head-block svg {
+        margin-top: 4px;
+    }
+    .vacancies .wrapper .block .head-block {
+        align-items: flex-start;
+    }
+    .vacancies .wrapper .block .head-block .info .info-list {
+        margin-top: 8px;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 8px;
+    }
+    .vacancies .wrapper .block {
+        height: auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    .vacancies .text-description {
+        max-width: 400px;
+    }
+    .vacancies .wrapper {
+        margin-top: 24px;
+    }
+    .vacancies .wrapper .block .content .btn_send-resume {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .vacancies .wrapper .block .info .name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
