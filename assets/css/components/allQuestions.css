@@ -104,15 +104,8 @@
     font-weight: 400;
     line-height: 18px;
 }
-
-.questions-menu {
-    width: 100%;
+.questions_block .come-back {
     display: none;
-    flex-direction: column;
-    gap: 16px;
-}
-.questions-menu.active {
-    display: flex;
 }
 
 /* АДАПТИВ */
@@ -120,6 +113,11 @@
     .all-questions .wrapper {
         margin-top: 60px;
         gap: 80px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .all-questions .wrapper {
+        margin-top: 32px;
     }
 }
 @media screen and (max-width: 880px) {
@@ -136,15 +134,22 @@
 }
 @media screen and (max-width: 744px) {
     .all-questions .wrapper {
-        gap: 32px;
+        gap: 0;
+        margin-top: 28px;
     }
     .all-questions .questions_block {
-        display: none;
+        width: 100%;
+    }
+    .all-questions .questions_block.active {
+        display: flex;
     }
     .sections-questions {
         width: 100%;
         max-width: none;
         min-width: none;
+    }
+    .all-questions .questions_block.hidden {
+        display: none;
     }
     .sections-questions h5 {
         color: var(--Dark-Grey);
@@ -170,10 +175,44 @@
     .sections-questions .list .item .chevron {
         display: flex;
     }
+    .questions_block .come-back {
+        display: flex;
+    }
+    .questions_block .questions_block-name {
+        margin-top: 34px;
+        color: var(--Black);
+        text-align: center;
+        font-family: Manrope;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    .select-questions_block {
+        margin-top: 24px;
+    }
 }
 @media screen and (max-width: 560px) {
     .all-questions .wrapper {
         gap: 24px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .all-questions .wrapper {
+        margin-top: 24px;
+    }
+    .all-questions .questions_card {
+        padding: 16px;
+    }
+    .questions_card .card-head h4 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px; 
+    }
+    .questions_block .come-back {
+        font-size: 14px;
+        line-height: 16px;
+        gap: 4px;
     }
 }
 @media screen and (max-width: 358px) {
