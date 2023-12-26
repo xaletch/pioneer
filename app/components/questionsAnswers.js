@@ -25,9 +25,13 @@ accordionItem.forEach((item) => {
 
 // ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ НУЖНЫХ ВОПРОСОВ И ОТВЕТОВ ОТ ВЫБРАННОГО РАЗДЕЛА
 function initializeClickHandlers() {
-    const items = document.querySelectorAll('.sections-questions .item');
-    const questionBlocks = document.querySelectorAll('.select-questions_block');
-  
+    const list = document.querySelector('.all-questions .sections-questions');
+    const items = document.querySelectorAll('.all-questions .sections-questions .item');
+    const questionsMain = document.querySelector('.all-questions .questions_block');
+    const questionBlocks = document.querySelectorAll('.all-questions .select-questions_block');
+    const questionName = document.querySelector('.all-questions .questions_block-name');
+    const backButton = document.querySelector('.all-questions .come-back');
+
     function setActiveBlock(index) {
         questionBlocks.forEach((block, blockIndex) => {
             if (blockIndex === index) {
@@ -43,44 +47,45 @@ function initializeClickHandlers() {
             item.classList.remove('active');
         });
     };
-  
 
-    items.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            clearActiveItems();
-            item.classList.add('active');
-            setActiveBlock(index);
-        });
+    backButton.addEventListener('click', () => {
+        if (list.style.display === 'none') {
+            list.style.display = 'block';
+            questionsMain.classList.add('hidden');
+        } else {
+            questionsMain.classList.remove('hidden');
+        }
     });
+
+    if (window.matchMedia("(max-width: 744px)").matches) {
+        questionsMain.classList.add('hidden');
+        
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const text = item.textContent.trim();
+                clearActiveItems();
+                
+                setActiveBlock(list.style.display = 'none');
+
+                questionsMain.classList.remove('hidden');
+                item.classList.add('active');
+                setActiveBlock(index);
+                
+                questionName.textContent = text;
+            });
+        });
+    } else {
+        items.forEach((item, index) => {
+            questionsMain.classList.remove('hidden');
+
+            item.addEventListener('click', () => {
+                clearActiveItems();
+                item.classList.add('active');
+                setActiveBlock(index);
+            });
+        });
+    }
 };
-  
+
 document.addEventListener('DOMContentLoaded', initializeClickHandlers);
-
-
-// В РАЗРАБОТКЕ
-// function initializeOpenQuestions() {
-//     const allQuestionsSection = document.querySelector('.all-questions');
-//     const questionsBlocks = document.querySelectorAll('.questions-menu');
-//     const comebackButton = document.querySelector('.questions-menu .come-back');
-  
-//     document.querySelectorAll('.all-questions .item').forEach((item, index) => {
-//         item.addEventListener('click',() => {
-//             questionsBlocks.forEach((elem) => {
-//                 elem.classList.remove('active');
-//             });
-//             allQuestionsSection.style.display = 'none';
-//             questionsBlocks[index].classList.add('active');
-//         });
-//     });
-  
-//     comebackButton.addEventListener('click', () => {
-//         questionsBlocks.forEach((elem) => {
-//             elem.classList.remove('active');
-//         });
-//         allQuestionsSection.style.display = '';
-//     });
-// }
-
-// if (window.matchMedia("(max-width: 744px)").matches) {
-//     document.addEventListener('DOMContentLoaded', initializeOpenQuestions);
-// }
+window.addEventListener('resize', initializeClickHandlers);
