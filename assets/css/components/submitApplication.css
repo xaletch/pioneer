@@ -1,0 +1,389 @@
+.submit-application .wrapper {
+    padding: 80px;
+    border-radius: 34px;
+    background: var(--Blue-main);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.submit-application .wrapper .block-form {
+    max-width: 624px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    position: relative;
+    z-index: 5;
+}
+.submit-application .wrapper .block-title {
+    position: relative;
+}
+.submit-application .wrapper .block-title svg {
+    position: absolute;
+    bottom: -20px;
+    right: 60px;
+}
+.submit-application .wrapper .title {
+    text-align: start;
+    color: var(--White);
+}
+.submit-application .wrapper .block-form .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.submit-application .inputs .input-group label {
+    color: var(--White, #FFF);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.submit-application .inputs .input-group .input-wrapper {
+    margin-top: 4px;
+    width: 300px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--opacity-30-white);
+    gap: 12px;
+    box-sizing: border-box;
+}
+.submit-application .inputs .input-group .input-wrapper span {
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+.submit-application .inputs .input-group .input-wrapper input {
+    width: 100%;
+    padding: 12px 12px 12px 0;
+    background: none;
+    font-family: var(--main-font);
+    color: var(--White);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.submit-application .inputs .input-group .input-wrapper input::placeholder {
+    color: var(--white-opacity-40);
+}
+.submit-application .inputs .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.submit-application .inputs .checkbox label {
+    color: var(--White);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.submit-application .wrapper .block-form form button {
+    margin-top: 44px;
+    width: 280px;
+    padding: 12px 0;
+    border-radius: 44px;
+    background: var(--Lightest-grey);
+
+    color: var(--Black, #313545);
+    font-size: 18px;
+    font-family: var(--main-font);
+    font-weight: 600;
+    line-height: normal;
+    transition: background 0.3s ease-in-out;
+}
+.submit-application .wrapper .block-form form button:hover {
+    background: var(--Light-outline);
+}
+.submit-application .wrapper .description {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+.submit-application .wrapper .description .card {
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    border-radius: 16px;
+    background: var(--White);
+    box-shadow: 0px 4px 25px 0px rgba(32, 40, 47, 0.15);
+    box-sizing: border-box;
+    z-index: 3;
+}
+.submit-application .wrapper .description .card p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+}
+.submit-application .wrapper .description .card.arrange {
+    top: 54%;
+    right: 70px;
+    transform: translateY(-54%);
+}
+.submit-application .wrapper .description .card.deliver {
+    width: 310px;
+    bottom: 124px;
+    left: 0;
+}
+.submit-application .wrapper .description .card .green {
+    color: var(--Green);
+}
+.submit-application .wrapper .description .card .purple {
+    color: var(--Purple);
+}
+.submit-application .wrapper .description .bg-svg, .bg-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.submit-application .wrapper .description .bg-svg {
+    position: absolute;
+    z-index: 1;
+}
+.submit-application .wrapper .description .bg-img {
+    z-index: 2;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1280px) {
+    .submit-application .wrapper {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .submit-application .wrapper .block-form {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .submit-application .wrapper .block-form .inputs {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .submit-application .wrapper .bg-img {
+        width: 694px;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        transform: translateY(-10%);
+    }
+    .submit-application .inputs .input-group .input-wrapper {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .submit-application .wrapper .block-form .block-title svg {
+        width: 180px;
+        left: 0;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        right: auto;
+        left: 170px;
+    }
+    .submit-application .wrapper .description .card.deliver {
+        bottom: 100px;
+        left: auto;
+        right: 70px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .submit-application .inputs .input-group .input-wrapper {
+        width: 50%;
+    }
+    .submit-application .wrapper .description .bg-img {
+        right: -60px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .submit-application .wrapper .block-form .block-title svg {
+        width: 180px;
+        left: auto;
+        right: 190px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .submit-application .wrapper {
+        height: 660px;
+        padding: 38px 32px 0px 32px;
+    }
+    .submit-application .wrapper .block-form {
+        gap: 24px;
+    }
+    .submit-application .wrapper .block-form form {
+        width: 100%;
+    }
+    .submit-application .wrapper .block-form form button {
+        margin-top: 24px;
+    }
+    .submit-application .wrapper .block-form .block-title {
+        max-width: 500px;
+    }
+    .submit-application .wrapper .block-form .block-title h3 {
+        text-align: center;
+    }
+    .submit-application .wrapper .block-form .block-title svg {
+        width: 180px;
+        bottom: 20px;
+        right: 0;
+    }
+    .submit-application .wrapper .block-form .inputs {
+        width: 80%;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .submit-application .inputs .input-group .input-wrapper {
+        width: 100%;
+    }
+    .submit-application .wrapper .bg-img {
+        width: 694px;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        top: auto;
+        right: auto;
+        bottom: 150px;
+        left: 130px;
+        transform: translateY(-54%);
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .submit-application .wrapper .block-form .inputs {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .submit-application .wrapper .description .card.arrange {
+        left: 180px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .submit-application .wrapper {
+        height: 960px;
+        flex-direction: column;
+    }
+    .submit-application .wrapper .block-form .block-title svg {
+        width: 140px;
+        bottom: auto;
+        right: 70px;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        transform: translateY(-54%)
+    }
+    .submit-application .wrapper .block-form .inputs {
+        width: 100%;
+    }
+    .submit-application .title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .submit-application .wrapper {
+        height: 1000px;
+    }
+    .submit-application .wrapper .description .card {
+        padding: 12px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .submit-application .wrapper .description .bg-img {
+        right: -60px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .submit-application .wrapper .block-form .block-title {
+        max-width: 370px;
+    }
+    .submit-application .wrapper .block-form form button {
+        width: 100%;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        bottom: 150px;
+        left: 200px;
+    }
+    .submit-application .wrapper .description .card.deliver {
+        bottom: 100px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .submit-application .wrapper .block-form .block-title {
+        max-width: 350px;
+    }
+    .submit-application .inputs .checkbox label {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .cyberpunk-checkbox {
+        min-width: 20px;
+        min-height: 20px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .submit-application .wrapper .description .card svg {
+        width: 24px;
+        height: 24px;
+    }
+    .submit-application .wrapper .block-form .inputs {
+        gap: 16px;
+    }
+    .submit-application .wrapper .block-form form button {
+        margin-top: 16px;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        bottom: 180px;
+        left: 50%;
+        transform: translateX(-30px);
+    }
+    .submit-application .wrapper .description .card.deliver {
+        width: 273px;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .submit-application .wrapper .block-form .block-title svg {
+        width: 122px;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 379px) {
+    .submit-application .wrapper .block-form .block-title {
+        max-width: 235px;
+    }
+    .submit-application .wrapper .block-form .block-title svg {
+        width: 122px;
+        right: 60px;
+    }
+    .submit-application .wrapper .description .card.arrange {
+        transform: translateX(-20px);
+    }
+    .submit-application .wrapper {
+        height: 950px;
+    }
+    .submit-application .wrapper .description .bg-img {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .submit-application .wrapper .description .card.arrange {
+        transform: translateX(15px);
+    }
+
+}
