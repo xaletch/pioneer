@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-page);
+    font-family: var(--main-font);
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, p, span, a {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    user-select: none;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+}
