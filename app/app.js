@@ -237,21 +237,3 @@ servicesItem.forEach((item, index) => {
         contentCategoryHead.textContent = categoryName;
     });
 });
-
-// ЛЕНИВАЯ ЗАГРУЗКА КАРТИНОК
-window.onload = () => {
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entity) => {
-            if (entity.isIntersecting) {
-                entity.target.src = entity.target.dataset.src;
-
-                observer.unobserve(entity.target);
-            }
-        });
-    }, {});
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-        observer.observe(img);
-    });
-};
