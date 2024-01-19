@@ -237,3 +237,20 @@ servicesItem.forEach((item, index) => {
         contentCategoryHead.textContent = categoryName;
     });
 });
+
+// LAZY LOADING
+
+window.onload = () => {
+    const observer = new IntersectionObserver((entities, observer) => {
+        entities.forEach(entity => {
+            if (entity.isIntersecting) {
+                entity.target.src = entity.target.dataset.src;
+
+                observer.unobserve(entity.target);
+            }
+        });
+    }, {});
+
+    const image = document.querySelectorAll('.img');
+    image.forEach(img => observer.observe(img));
+};
