@@ -1,0 +1,94 @@
+.team .wrapper {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+.team .wrapper .card {
+    width: 100%;
+    border-radius: 34px;
+    border: 1px solid var(--Light-outline);
+    background: var(--White);
+}
+.team .wrapper .card .card-img {
+    width: 100%;
+    border-radius: 34px 34px 0 0;
+}
+.team .wrapper .card .card-description {
+    padding: 16px 24px 24px 24px;
+}
+.team .wrapper .card .card-description .name {
+    color: var(--Black);
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.team .wrapper .card .card-description p {
+    margin-top: 4px;
+    color: var(--Dark-Grey);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1130px) {
+    .team .wrapper {
+        margin-top: 32px;
+        gap: 24px;
+    }
+    .team .wrapper .card .card-description .name {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .team .wrapper .card .card-description p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .team .wrapper {
+        gap: 18px;
+    }
+    .team .wrapper .card .card-description {
+        padding: 16px 18px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .team .wrapper .card .card-description .name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .team .wrapper .card .card-description p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .team .wrapper .card .card-description {
+        padding: 16px 12px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .team .wrapper {
+        margin-top: 24px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 14px;
+    }
+    .team .wrapper .card .card-description .name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .team .wrapper .card .card-description p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
