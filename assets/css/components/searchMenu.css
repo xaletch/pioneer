@@ -1,0 +1,348 @@
+<<<<<<< HEAD
+.search_menu {
+    background: rgb(13, 20, 45, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.search_menu.active {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.search_menu .search_menu-block {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 690px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background: var(--White);
+    position: relative;
+    overflow: hidden;
+}
+  
+.search_menu-block .search {
+    width: 100%;
+    padding: 18px 100px 18px 24px;
+    color: var(--Black);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid var(--Light-outline);
+    box-sizing: border-box;
+}
+.search_menu .search::placeholder {
+    color: var(--Light-grey);
+}
+.close-menu {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    cursor: pointer;
+}
+.search_menu-block .block-inner {
+    padding: 16px 34px 34px;
+    max-height: 570px;
+    overflow: scroll;
+    scrollbar-color: var(--Grey-light);
+    -webkit-overflow-scrolling: touch;
+}
+.search_menu-block .block-inner::-webkit-scrollbar {
+    width: 4px;
+}
+.search_menu-block .block-inner::-webkit-scrollbar-thumb {
+    background: var(--Grey-light);
+    border-radius: 4px;
+}
+.search_menu-block .block-inner::-webkit-scrollbar-track {
+    background: var(--Lightest-grey);
+}
+.search_menu-block .block-inner .search-sort .list {
+    display: flex;
+    gap: 12px;
+}
+.search_menu-block .search-sort .list .item {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--Grey-outline);
+    background: var(--White);
+    position: relative;
+
+    fill: var(--Light-grey);
+    color: var(--Black);
+        font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    cursor: pointer;
+    user-select: none;
+}
+.search_menu-block .search-sort .list .item span {
+    display: flex;
+}
+.search_menu-block .search-sort .list .item:hover .sort-content {
+    display: block;
+}
+.search_menu-block .search-sort .sort-content {
+    padding-top: 8px;
+    width: 208px;
+    position: absolute;
+    top: 102%;
+    left: 0;
+    right: 0;
+    border-radius: 16px;
+    background: var(--White);
+    box-shadow: 0px 4px 25px 0px rgba(168, 182, 194, 0.15);
+    z-index: 9;
+    display: none;
+}
+.search_menu-block .search-sort .list .item:hover span {
+    transform: rotate(180deg);
+    transition: .3s;
+}
+.search_menu-block .search-sort .sort-content .category {
+    padding: 11px 12px;
+    color: var(--Black);
+    font-size: 14px;
+        font-family: var(--main-font);
+    font-weight: 600;
+    line-height: 22px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.search_menu-block .search-sort .sort-content .category:hover {
+    background: var(--Lightest-grey);
+}
+.search_menu-block .popular-documents, .requests-history, .results {
+    margin-top: 24px;
+}
+
+.search_menu-block .popular-documents h3, .requests-history h3, .results h3 {
+    color: var(--Black);
+        font-family: var(--main-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+.search_menu-block .wrapper {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.search_menu-block .card {
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--Lightest-grey);
+}
+.search_menu-block .card a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.search_menu-block .card .image {
+    width: 38px;
+    height: 50px;
+    border-radius: 8px;
+    background: var(--Grey-outline);
+}
+.search_menu-block .card h4 {
+    color: var(--Black);
+        font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.search_menu-block .card p {
+    color: var(--Dark-Grey);
+        font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+=======
+.search_menu {
+    background: rgb(13, 20, 45, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.search_menu.active {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.search_menu .search_menu-block {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 690px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background: var(--White);
+    position: relative;
+    overflow: hidden;
+}
+  
+.search_menu-block .search {
+    width: 100%;
+    padding: 18px 100px 18px 24px;
+    color: var(--Black);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid var(--Light-outline);
+    box-sizing: border-box;
+}
+.search_menu .search::placeholder {
+    color: var(--Light-grey);
+}
+.close-menu {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    cursor: pointer;
+}
+.search_menu-block .block-inner {
+    padding: 16px 34px 34px;
+    max-height: 570px;
+    overflow: scroll;
+    scrollbar-color: var(--Grey-light);
+    -webkit-overflow-scrolling: touch;
+}
+.search_menu-block .block-inner::-webkit-scrollbar {
+    width: 4px;
+}
+.search_menu-block .block-inner::-webkit-scrollbar-thumb {
+    background: var(--Grey-light);
+    border-radius: 4px;
+}
+.search_menu-block .block-inner::-webkit-scrollbar-track {
+    background: var(--Lightest-grey);
+}
+.search_menu-block .block-inner .search-sort .list {
+    display: flex;
+    gap: 12px;
+}
+.search_menu-block .search-sort .list .item {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--Grey-outline);
+    background: var(--White);
+    position: relative;
+
+    fill: var(--Light-grey);
+    color: var(--Black);
+        font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    cursor: pointer;
+    user-select: none;
+}
+.search_menu-block .search-sort .list .item span {
+    display: flex;
+}
+.search_menu-block .search-sort .list .item:hover .sort-content {
+    display: block;
+}
+.search_menu-block .search-sort .sort-content {
+    padding-top: 8px;
+    width: 208px;
+    position: absolute;
+    top: 102%;
+    left: 0;
+    right: 0;
+    border-radius: 16px;
+    background: var(--White);
+    box-shadow: 0px 4px 25px 0px rgba(168, 182, 194, 0.15);
+    z-index: 9;
+    display: none;
+}
+.search_menu-block .search-sort .list .item:hover span {
+    transform: rotate(180deg);
+    transition: .3s;
+}
+.search_menu-block .search-sort .sort-content .category {
+    padding: 11px 12px;
+    color: var(--Black);
+    font-size: 14px;
+        font-family: var(--main-font);
+    font-weight: 600;
+    line-height: 22px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.search_menu-block .search-sort .sort-content .category:hover {
+    background: var(--Lightest-grey);
+}
+.search_menu-block .popular-documents, .requests-history, .results {
+    margin-top: 24px;
+}
+
+.search_menu-block .popular-documents h3, .requests-history h3, .results h3 {
+    color: var(--Black);
+        font-family: var(--main-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+.search_menu-block .wrapper {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.search_menu-block .card {
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--Lightest-grey);
+}
+.search_menu-block .card a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.search_menu-block .card .image {
+    width: 38px;
+    height: 50px;
+    border-radius: 8px;
+    background: var(--Grey-outline);
+}
+.search_menu-block .card h4 {
+    color: var(--Black);
+        font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.search_menu-block .card p {
+    color: var(--Dark-Grey);
+        font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+>>>>>>> 246bf18003014723a9ae2cdd0c266f7cd7de2674
+}

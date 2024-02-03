@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+@import '../components/searchMenu.css';
+
+@import '../components/hero.css';
+
+
+/* consultations */
+@import '../components/consultations.css';
+
+/* work us */
+@import '../components/workUs.css';
+
+/* submit-application */
+@import '../components/submitApplication.css';
+
+/* questions */
+@import '../components/questions.css';
+
+/* contacts */
+@import '../components/contacts.css';
+
+/* documents */
+@import '../components/documents.css';
+
+
+/* footer */
+=======
+@import '../components/searchMenu.css';
+
+@import '../components/hero.css';
+
+
+/* consultations */
+@import '../components/consultations.css';
+
+/* work us */
+@import '../components/workUs.css';
+
+/* submit-application */
+@import '../components/submitApplication.css';
+
+/* questions */
+@import '../components/questions.css';
+
+/* contacts */
+@import '../components/contacts.css';
+
+/* documents */
+@import '../components/documents.css';
+
+
+/* footer */
+>>>>>>> 246bf18003014723a9ae2cdd0c266f7cd7de2674
+@import '../components/footer.css';
