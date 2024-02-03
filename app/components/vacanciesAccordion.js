@@ -1,0 +1,1 @@
+const accordionItem=document.querySelectorAll(".vacancies .wrapper .block");accordionItem.forEach(e=>{e.querySelector(".vacancies .wrapper .block .head-block").addEventListener("click",()=>{e.classList.toggle("active");let c=e.querySelector(".vacancies .wrapper .block .content");e.classList.contains("active")?c.classList.remove("hidden"):c.classList.add("hidden")})});

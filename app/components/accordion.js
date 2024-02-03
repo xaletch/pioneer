@@ -1,0 +1,1 @@
+const accordionItem=document.querySelectorAll(".questions .questions_accordion .card");accordionItem.forEach(e=>{e.querySelector(".questions_accordion .card .name").addEventListener("click",()=>{e.classList.toggle("active");let c=e.querySelector(".questions_accordion .card .description");e.classList.contains("active")?c.style.height=`${c.scrollHeight}px`:c.style.height="0"})});

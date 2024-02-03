@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){let e=Array.from(document.querySelectorAll(".blog .wrapper .blog_card")),l=document.querySelector("#blog_show-more"),o=3;e.forEach((e,l)=>{l>=3&&(e.style.display="none")}),l.addEventListener("click",function t(){let n=e.slice(o,o+3);n.forEach(e=>{e.style.display="grid"}),(o+=3)>=e.length&&(l.style.display="none")})});
