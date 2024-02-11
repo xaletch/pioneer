@@ -1,0 +1,488 @@
+<<<<<<< HEAD
+.scheme {
+    padding: 20px 24px;
+    width: 261px;
+    height: 124px;
+    margin: 0 auto;
+}
+.scheme .scheme_inner {
+    position: relative;
+    height: 124px;
+}
+
+.scheme .scheme_inner-2 {
+    border: 1px dashed var(--Grey-light);
+}
+.scheme .scheme_inner .scheme-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--Grey-light);
+    position: absolute;
+    background: var(--Lightest-grey);
+    box-shadow: 0 0 0px 6px var(--Lightest-grey);
+}
+.scheme .scheme_inner-2 .scheme-item1 {
+    top: -6px;
+    left: -6px;
+    z-index: 1;
+}
+.scheme .scheme_inner-2 .scheme-item2 {
+    bottom: -6px;
+    left: -6px;
+    z-index: 1;
+}
+.scheme .scheme_inner-2 .scheme-item3 {
+    top: -6px;
+    right: -6px;
+    z-index: 1;
+}
+.scheme .scheme_inner-2 .scheme-item4 {
+    bottom: -6px;
+    right: -6px;
+    z-index: 1;
+}
+
+.scheme .block-scheme {
+    height: 100%;
+    position: relative;
+}
+.scheme .scheme_inner .block-scheme-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.scheme .scheme_inner-2 .block-scheme-2::before {
+    content: "";
+    width: 99%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 1px dashed var(--Grey-light);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.scheme .block-scheme .action {
+    display: flex;
+    border-radius: 48px;
+    background: var(--White);
+    box-shadow: 0px 4px 25px 0px rgba(168, 182, 194, 0.15);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+.scheme .block-scheme .action-small {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+.scheme .block-scheme .action-big {
+    padding: 21px;
+    width: 86px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Оформление документов ГОСТ Р */
+.scheme .block-scheme-3 .action-favorites {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.scheme .block-scheme-3 .action-tools1 {
+    top: 0px;
+    left: 83px;
+    position: absolute;
+}
+.scheme .block-scheme-3 .action-tools2 {
+    bottom: 0px;
+    left: 83px;
+    position: absolute;
+}
+
+.scheme .block-scheme-3 .action-ready {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.scheme .block-scheme-3 .line1 {
+    top: 50%;
+    left: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-3 .lineT {
+    top: 36px;
+    left: 136px;
+    position: absolute;
+}
+.scheme .block-scheme-3 .lineB {
+    bottom: 36px;
+    left: 136px;
+    position: absolute;
+}
+
+/* Пожарная Безопасность */
+.scheme .block-scheme .action-fire {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.scheme .block-scheme-4 .scheme-item1 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.scheme .block-scheme-4 .scheme-item2 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.scheme .block-scheme-4 .lineL {
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-4 .lineR {
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+/* Охрана Труда */
+.scheme .block-scheme-5 .action-security {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-5 .action-briefcase {
+    top: 0;
+    left: 130px;
+    position: absolute;
+}
+.scheme .block-scheme-5 .action-home {
+    bottom: 0;
+    left: 130px;
+    position: absolute;
+}
+.scheme .block-scheme-5 .action-user {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-5 .line1 {
+    top: 50%;
+    right: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-5 .lineT {
+    top: 36px;
+    left: 100px;
+    position: absolute;
+}
+.scheme .block-scheme-5 .lineB {
+    bottom: 36px;
+    left: 100px;
+    position: absolute;
+}
+
+/*  */
+.scheme .block-scheme-6 .action-reward {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-stateFire {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-cloth {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-apple {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-computer {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.scheme .block-scheme-6 .lineL {
+    top: 50%;
+    left: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-6 .lineR {
+    top: 50%;
+    right: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+=======
+.scheme {
+    padding: 20px 24px;
+    width: 261px;
+    height: 124px;
+    margin: 0 auto;
+}
+.scheme .scheme_inner {
+    position: relative;
+    height: 124px;
+}
+
+.scheme .scheme_inner-2 {
+    border: 1px dashed var(--Grey-light);
+}
+.scheme .scheme_inner .scheme-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--Grey-light);
+    position: absolute;
+    background: var(--Lightest-grey);
+    box-shadow: 0 0 0px 6px var(--Lightest-grey);
+}
+.scheme .scheme_inner-2 .scheme-item1 {
+    top: -6px;
+    left: -6px;
+    z-index: 1;
+}
+.scheme .scheme_inner-2 .scheme-item2 {
+    bottom: -6px;
+    left: -6px;
+    z-index: 1;
+}
+.scheme .scheme_inner-2 .scheme-item3 {
+    top: -6px;
+    right: -6px;
+    z-index: 1;
+}
+.scheme .scheme_inner-2 .scheme-item4 {
+    bottom: -6px;
+    right: -6px;
+    z-index: 1;
+}
+
+.scheme .block-scheme {
+    height: 100%;
+    position: relative;
+}
+.scheme .scheme_inner .block-scheme-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.scheme .scheme_inner-2 .block-scheme-2::before {
+    content: "";
+    width: 99%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 1px dashed var(--Grey-light);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.scheme .block-scheme .action {
+    display: flex;
+    border-radius: 48px;
+    background: var(--White);
+    box-shadow: 0px 4px 25px 0px rgba(168, 182, 194, 0.15);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+.scheme .block-scheme .action-small {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+.scheme .block-scheme .action-big {
+    padding: 21px;
+    width: 86px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Оформление документов ГОСТ Р */
+.scheme .block-scheme-3 .action-favorites {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.scheme .block-scheme-3 .action-tools1 {
+    top: 0px;
+    left: 83px;
+    position: absolute;
+}
+.scheme .block-scheme-3 .action-tools2 {
+    bottom: 0px;
+    left: 83px;
+    position: absolute;
+}
+
+.scheme .block-scheme-3 .action-ready {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.scheme .block-scheme-3 .line1 {
+    top: 50%;
+    left: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-3 .lineT {
+    top: 36px;
+    left: 136px;
+    position: absolute;
+}
+.scheme .block-scheme-3 .lineB {
+    bottom: 36px;
+    left: 136px;
+    position: absolute;
+}
+
+/* Пожарная Безопасность */
+.scheme .block-scheme .action-fire {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.scheme .block-scheme-4 .scheme-item1 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.scheme .block-scheme-4 .scheme-item2 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.scheme .block-scheme-4 .lineL {
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-4 .lineR {
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+/* Охрана Труда */
+.scheme .block-scheme-5 .action-security {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-5 .action-briefcase {
+    top: 0;
+    left: 130px;
+    position: absolute;
+}
+.scheme .block-scheme-5 .action-home {
+    bottom: 0;
+    left: 130px;
+    position: absolute;
+}
+.scheme .block-scheme-5 .action-user {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-5 .line1 {
+    top: 50%;
+    right: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-5 .lineT {
+    top: 36px;
+    left: 100px;
+    position: absolute;
+}
+.scheme .block-scheme-5 .lineB {
+    bottom: 36px;
+    left: 100px;
+    position: absolute;
+}
+
+/*  */
+.scheme .block-scheme-6 .action-reward {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-stateFire {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-cloth {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-apple {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.scheme .block-scheme-6 .action-computer {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.scheme .block-scheme-6 .lineL {
+    top: 50%;
+    left: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.scheme .block-scheme-6 .lineR {
+    top: 50%;
+    right: 54px;
+    transform: translateY(-50%);
+    position: absolute;
+>>>>>>> 246bf18003014723a9ae2cdd0c266f7cd7de2674
+}

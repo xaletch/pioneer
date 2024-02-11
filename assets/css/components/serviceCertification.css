@@ -1,0 +1,354 @@
+<<<<<<< HEAD
+.service-certification .wrapper {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+}
+.service-certification .wrapper_security {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+}
+.service-certification .wrapper .title {
+    font-weight: 700;
+}
+.service-certification .services-card {
+    border-radius: 34px;
+    background: var(--Lightest-grey);
+}
+.service-certification .services-card .card-inner {
+    padding: 34px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.service-certification .services-card p {
+    color: var(--Black);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+/* ОХРАНА ТРУДА */
+.service-certification .wrapper_security {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+}
+.service-certification .wrapper_security .card-inner {
+    padding: 34px 24px;
+    gap: 20px;
+}
+.service-certification .wrapper_security .card-inner .description {
+    text-align: center;
+}
+.service-certification .wrapper_security .card-inner .description h4, .name {
+    color: var(--Black);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.service-certification .wrapper_security .card-inner .description p {
+    margin-top: 8px;
+    color: var(--Dark-Grey);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1100px) {
+    .service-certification .wrapper {
+        margin-top: 44px;
+        gap: 24px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 24px 20px;
+    }
+    .service-certification .services-card p {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+
+    /* ОХРАНА ТРУДА */
+    .service-certification .wrapper_security {
+        margin-top: 44px;
+        gap: 24px;
+    }
+    .service-certification .wrapper_security .card-inner {
+        padding: 24px 20px;
+        gap: 16px;
+    }
+    .service-certification .wrapper_security .card-inner .description h4 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+    .service-certification .wrapper_security .card-inner .description p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 999px) {
+    .service-certification .wrapper {
+        gap: 18px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 20px 14px;
+        gap: 12px;
+    }
+    .service-certification .services-card p {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .service-certification .wrapper {
+        margin-top: 34px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 20px 16px;
+    }
+}
+@media screen and (max-width: 640px) {
+    /* ОХРАНА ТРУДА  */
+    .service-certification .wrapper_security {
+        margin-top: 34px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 13px;
+    }
+    .service-certification .wrapper_security .card-inner {
+        align-items: flex-start;
+        padding: 16px 12px;
+        gap: 12px;
+    }
+    .service-certification .wrapper_security .card-inner .description h4 {
+        text-align: start;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .service-certification .wrapper_security .card-inner .description p {
+        text-align: start;
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .service-certification .wrapper {
+        gap: 13px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 16px 12px;
+    }
+    .service-certification .services-card svg {
+        width: 40px;
+        height: 40px;
+    }
+    .service-certification .services-card img {
+        width: 40px;
+        height: 40px;
+    }
+    .service-certification .services-card p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+=======
+.service-certification .wrapper {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+}
+.service-certification .wrapper_security {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+}
+.service-certification .wrapper .title {
+    font-weight: 700;
+}
+.service-certification .services-card {
+    border-radius: 34px;
+    background: var(--Lightest-grey);
+}
+.service-certification .services-card .card-inner {
+    padding: 34px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.service-certification .services-card p {
+    color: var(--Black);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+/* ОХРАНА ТРУДА */
+.service-certification .wrapper_security {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+}
+.service-certification .wrapper_security .card-inner {
+    padding: 34px 24px;
+    gap: 20px;
+}
+.service-certification .wrapper_security .card-inner .description {
+    text-align: center;
+}
+.service-certification .wrapper_security .card-inner .description h4, .name {
+    color: var(--Black);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.service-certification .wrapper_security .card-inner .description p {
+    margin-top: 8px;
+    color: var(--Dark-Grey);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* АДАПТИВ */
+@media screen and (max-width: 1100px) {
+    .service-certification .wrapper {
+        margin-top: 44px;
+        gap: 24px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 24px 20px;
+    }
+    .service-certification .services-card p {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+
+    /* ОХРАНА ТРУДА */
+    .service-certification .wrapper_security {
+        margin-top: 44px;
+        gap: 24px;
+    }
+    .service-certification .wrapper_security .card-inner {
+        padding: 24px 20px;
+        gap: 16px;
+    }
+    .service-certification .wrapper_security .card-inner .description h4 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+    .service-certification .wrapper_security .card-inner .description p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 999px) {
+    .service-certification .wrapper {
+        gap: 18px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 20px 14px;
+        gap: 12px;
+    }
+    .service-certification .services-card p {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .service-certification .wrapper {
+        margin-top: 34px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 20px 16px;
+    }
+}
+@media screen and (max-width: 640px) {
+    /* ОХРАНА ТРУДА  */
+    .service-certification .wrapper_security {
+        margin-top: 34px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 13px;
+    }
+    .service-certification .wrapper_security .card-inner {
+        align-items: flex-start;
+        padding: 16px 12px;
+        gap: 12px;
+    }
+    .service-certification .wrapper_security .card-inner .description h4 {
+        text-align: start;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .service-certification .wrapper_security .card-inner .description p {
+        text-align: start;
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .service-certification .wrapper {
+        gap: 13px;
+    }
+    .service-certification .services-card .card-inner {
+        padding: 16px 12px;
+    }
+    .service-certification .services-card svg {
+        width: 40px;
+        height: 40px;
+    }
+    .service-certification .services-card img {
+        width: 40px;
+        height: 40px;
+    }
+    .service-certification .services-card p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+>>>>>>> 246bf18003014723a9ae2cdd0c266f7cd7de2674
+}
