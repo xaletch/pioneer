@@ -1,0 +1,19 @@
+@import '../components/searchMenu.css';
+
+@import '../components/hero.css';
+
+/* article */
+@import '../components/article.css';
+
+/* article_wrapper */
+@import '../components/consultations.css';
+
+/* newsletter */
+@import '../components/newsletter.css';
+
+/* blog */
+@import '../components/blog.css';
+
+
+/* footer */
+@import '../components/footer.css';
